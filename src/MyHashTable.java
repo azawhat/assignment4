@@ -58,5 +58,8 @@ public class MyHashTable<K, V> {
         }
     }
 
-
+    private int getIndex(K key){
+        int hashCode = key.hashCode();
+        return Math.abs(hashCode % buckets.length);
+    }
 }
