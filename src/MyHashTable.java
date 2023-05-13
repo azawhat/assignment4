@@ -31,7 +31,7 @@ public class MyHashTable<K, V> {
         }
         bucket.add(new Entry<>(key,value));
         size++;
-        if (size>bucket.length*load_factor){
+        if (size> buckets.length * load_factor){
             resize();
         }
     }
@@ -41,7 +41,7 @@ public class MyHashTable<K, V> {
         List<Entry<K, V>> bucket = getBucket(index);
         for (Entry<K,V> entry: bucket) {
             if (entry.getKey().equals(key)){
-                return entry.getValue;
+                return entry.getValue();
             }
         }
         return null;
