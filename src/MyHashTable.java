@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Map;
 
+
+
 public class MyHashTable<K, V> {
     private static final int capacity = 16;
     private static final double load_factor = 0.75;
@@ -31,5 +33,16 @@ public class MyHashTable<K, V> {
         if (size>bucket.length*load_factor){
             resize();
         }
+    }
+
+    public V get(K key){
+        int index = getIndex(key);
+        List<Entry<K, V>> bucket = getBucket(index);
+        for (Entry<K,V> entry: bucket) {
+            if (entry.getKey().equals(key)){
+                return entry.getValue;
+            }
+        }
+        return null;
     }
 }
