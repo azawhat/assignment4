@@ -93,5 +93,13 @@ public class MyHashTable<K, V> {
             this.key = key;
             this.value = value;
         }
+
+        public K getKey() {
+            return key;
+        }
+
+        public void setKey(K key) {
+            this.key = key;
+        }
     }
 }
