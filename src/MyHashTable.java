@@ -45,4 +45,18 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
+
+    public void remvoe(K key){
+        int index = getIndex(key);
+        List<Entry<K, V>> bucket = getBucket(index);
+        for (Entry<K,V> entry: bucket){
+            if (entry.getKey().equals(key)){
+                bucket.remove(entry);
+                size--;
+                return;
+            }
+        }
+    }
+
+
 }
