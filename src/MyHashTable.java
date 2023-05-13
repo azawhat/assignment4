@@ -16,4 +16,20 @@ public class MyHashTable<K, V> {
         buckets = new ArrayList[in_capacity];
         size = 0;
     }
+
+    public void put(K key, V value) {
+        int index = getIndex(key);
+        List<Entry<K,V>> bucket = getBucket(index);
+        for (Entry<K,V> entry: bucket) {
+            if (entry.getKey().equals(key)){
+                entry.setValue(value);
+                return;
+            }
+        }
+        bucket.add(new Entry<>(key,value));
+        size++;
+        if (size>bucket.length*load_factor){
+            resize();
+        }
+    }
 }
