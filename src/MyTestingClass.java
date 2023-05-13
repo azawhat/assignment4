@@ -9,5 +9,7 @@ public class MyTestingClass {
         return value;
     }
 
-
+    public void setValue(int value) {
+        this.value = value;
+    }
 }
