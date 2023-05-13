@@ -1,3 +1,11 @@
+/*
+*   value -  variable types of int in the TestingClass
+*   MyTestingClass - constructor
+*   getValue - getter for the variable
+*   setValue - setter for the variable
+*   hashCode - method that hashes the value
+* */
+
 public class MyTestingClass {
     private  int value;
 
