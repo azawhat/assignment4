@@ -120,8 +120,7 @@ It has loop to get value of the key.
         return Math.abs(hashCode % buckets.length);
     }
 ```
-7. 
-8. `getBucket` method that gets the index of the bucket.
+6. `getBucket` method that gets the index of the bucket.
 ```
     private List<Entry<K,V>> getBucket(int index){
         if (buckets[index] == null){
