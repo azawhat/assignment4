@@ -1,7 +1,24 @@
+/*
+*  capacity  = variable that shows the capacity of the hashTable
+*  load_factor  = variable that increases the size of the hashTable
+*  buckets = variable that defines buckets of the hashTable
+*  size = size of the hashTable
+*  MyHashTable  = constructor that has capacity
+*  put    -   use to put elements into hashTable
+*  get   -     to get the index
+*  remove  -   to remove element
+*  getIndex  -  a method that is used to get the index
+*  getBucket -  to choose one correct bucket
+*  resize   -   method that increases the size
+*
+*  k key - variable of the class Entry. Has getter and setter
+*  v value  - variable of the class Entry. Has setter and getter
+*
+ * */
+
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-
 
 
 public class MyHashTable<K, V> {
