@@ -84,4 +84,8 @@ public class MyHashTable<K, V> {
             }
         }
     }
+
+    private static class Entry<K,V>{
+
+    }
 }
