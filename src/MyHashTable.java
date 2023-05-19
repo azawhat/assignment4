@@ -101,6 +101,20 @@ public class MyHashTable<K, V> {
             }
         }
     }
+/*  replace key old value and new value  */
+    public void replace(K key, V newValue){
+        int index = getIndex(key);
+        List<Entry<K,V>> bucket = getBucket(index);
+        for (Entry<K,V> entry: bucket) {
+            if (entry.getKey().equals(key)){
+                entry.setValue(newValue);
+                return;
+            }
+        }
+        bucket.add(new Entry<>(key,newValue));
+    }
+
+
 
     private static class Entry<K,V>{
         private K key;
